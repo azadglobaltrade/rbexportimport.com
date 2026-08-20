@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Export Documentation & Certifications — R B Export & Import</title>
+<meta name="description" content="Browse R B Export & Import's export documentation — licenses, quality certificates, and shipping paperwork available for every consignment." />
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://unpkg.com/lucide@latest"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        fontFamily: { jakarta: ['"Plus Jakarta Sans"', 'sans-serif'] },
+        colors: {
+          base: { 950:'#020617', 900:'#0B1120', 800:'#111827', 700:'#1E293B' },
+          navy: { 900:'#0C2340', 800:'#123456', 700:'#1A4A7A', 600:'#2563A8', 500:'#3B82C4', 400:'#60A5E8' },
+          amber: { 600:'#D97706', 500:'#F59E0B', 400:'#FBBF24' }
+        }
+      }
+    }
+  }
+</script>
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:'Plus Jakarta Sans',sans-serif;background:#0B1120;color:#E2E8F0;overflow-x:hidden}
+  ::selection{background:#F59E0B;color:#0B1120}
+  ::-webkit-scrollbar{width:6px}
+  ::-webkit-scrollbar-track{background:#111827}
+  ::-webkit-scrollbar-thumb{background:#2563A8;border-radius:3px}
+
+  @keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
+  @keyframes shimmer{0%{background-position:-200% 0}100%{background-position:200% 0}}
+  @keyframes popIn{from{opacity:0;transform:scale(.94) translateY(8px)}to{opacity:1;transform:scale(1) translateY(0)}}
+
+  .fade-up{opacity:0;transform:translateY(22px);transition:all .6s cubic-bezier(.22,1,.36,1)}
+  .fade-up.visible{opacity:1;transform:translateY(0)}
+  .d1{transition-delay:.08s}.d2{transition-delay:.16s}
+
+  .amber-btn{position:relative;overflow:hidden;transition:all .3s}
+  .amber-btn::before{content:'';position:absolute;top:0;left:-100%;width:100%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.15),transparent);transition:left .5s}
+  .amber-btn:hover::before{left:100%}
+
+  .glow-line{height:2px;background:linear-gradient(90deg,transparent,#2563A8,#F59E0B,#2563A8,transparent);background-size:200% 100%;animation:shimmer 4s linear infinite}
+  .divider{height:1px;background:linear-gradient(90deg,transparent,rgba(37,99,168,.3),transparent)}
+
+  .doc-card{position:relative;transition:transform .45s cubic-bezier(.22,1,.36,1),box-shadow .45s ease;cursor:pointer}
+  .doc-card .cb{position:relative;overflow:hidden;background:#111827;border:1px solid rgba(37,99,168,.22);transition:border-color .4s ease}
+  .doc-card:hover{transform:translateY(-6px)}
+  .doc-card:hover .cb{border-color:rgba(245,158,11,.4)}
+  .doc-card:hover .doc-shine{opacity:1}
+  .doc-card:hover .doc-icon{transform:scale(1.08) rotate(-4deg);background:rgba(245,158,11,.12);border-color:rgba(245,158,11,.4)}
+  .doc-card:hover .doc-icon svg{color:#F59E0B}
+  .doc-card:hover .doc-arrow{transform:translate(3px,-3px);opacity:1}
+
+  .doc-shine{position:absolute;inset:0;pointer-events:none;opacity:0;transition:opacity .5s ease;background:radial-gradient(420px circle at var(--mx,50%) var(--my,0%), rgba(245,158,11,.09), transparent 60%)}
+  .doc-icon{transition:all .4s cubic-bezier(.22,1,.36,1);background:rgba(37,99,168,.14);border:1px solid rgba(37,99,168,.28)}
+  .doc-icon svg{transition:color .4s ease}
+  .doc-arrow{transition:all .35s cubic-bezier(.22,1,.36,1);opacity:.35}
+
+  .tag-pill{transition:all .3s;border:1px solid rgba(37,99,168,.35)}
+  .tag-pill.active{background:linear-gradient(90deg,#D97706,#F59E0B);color:#0B1120;border-color:transparent}
+  .tag-pill:not(.active):hover{border-color:rgba(245,158,11,.45);color:#FBBF24}
+
+  .doc-grid-item{transition:opacity .4s ease,transform .4s cubic-bezier(.22,1,.36,1)}
+  .doc-grid-item.hide{opacity:0;transform:scale(.92);pointer-events:none;position:absolute;visibility:hidden}
+  .doc-grid-item.show{opacity:1;transform:scale(1);animation:popIn .45s cubic-bezier(.22,1,.36,1)}
+
+  .status-dot{position:relative}
+  .status-dot::after{content:'';position:absolute;inset:0;border-radius:9999px;background:inherit;opacity:.6;animation:ping-soft 2.2s cubic-bezier(0,0,.2,1) infinite}
+  @keyframes ping-soft{75%,100%{transform:scale(2.2);opacity:0}}
+
+  #docModal{transition:opacity .3s ease}
+  #docModal .modal-panel{transition:transform .35s cubic-bezier(.22,1,.36,1),opacity .35s ease}
+  #docModal.hidden .modal-panel{transform:translateY(16px) scale(.97);opacity:0}
+
+  .mobile-m{transform:translateX(100%);transition:transform .4s cubic-bezier(.22,1,.36,1)}
+  .mobile-m.open{transform:translateX(0)}
+</style>
+</head>
+<body class="bg-[radial-gradient(ellipse_at_10%_20%,rgba(37,99,168,.06)_0%,transparent_50%),radial-gradient(ellipse_at_90%_80%,rgba(245,158,11,.04)_0%,transparent_50%)]">
+
+  <!-- TOP BAR -->
+<div class="hidden sm:block bg-base-950 border-b border-navy-800/40">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2 flex items-center justify-between">
+    <div class="flex items-center gap-5">
+      <a href="tel:+9174319770009" class="flex items-center gap-1.5 text-[11px] text-slate-400 hover:text-amber-500 transition-colors">
+        <i data-lucide="phone" class="w-3 h-3"></i>+91 74319770009
+      </a>
+      <span class="flex items-center gap-1.5 text-[11px] text-slate-500">
+        <i data-lucide="mail" class="w-3 h-3"></i>rbexportimport786@gmail.com
+      </span>
+    </div>
+    <span class="text-[11px] text-slate-500 uppercase tracking-wider">Connecting Global Markets</span>
+  </div>
+</div>
+<!-- NAV -->
+<nav class="sticky top-0 z-50" style="background:rgba(11,17,32,.93);backdrop-filter:blur(20px);">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-16 lg:h-[72px]">
+      <a href="index.html" class="flex items-center gap-3 group">
+        
+        </span>
+         <img src="6068956911907836196_120.jpg" alt="R B Export & Import Logo" class="w-[50px] h-[50px] rounded-full transition-transform duration-300 group-hover:scale-105" />
+        <span class="leading-none">
+          <span>R B Export & Import</span>
+          
+        </span>
+      </a>
+      <div class="hidden lg:flex items-center gap-7">
+        <a href="index.html#about" class="text-slate-400 text-[11px] font-semibold uppercase tracking-[.15em] hover:text-amber-500 transition-colors">About</a>
+        <a href="product.html" class="text-slate-400 text-[11px] font-semibold uppercase tracking-[.15em] hover:text-amber-500 transition-colors">Products</a>
+        <a href="documents.html" class="text-amber-500 text-[11px] font-semibold uppercase tracking-[.15em]">Documents</a>
+        <a href="index.html#location" class="text-slate-400 text-[11px] font-semibold uppercase tracking-[.15em] hover:text-amber-500 transition-colors">Location</a>
+        <a href="index.html#contact" class="amber-btn bg-gradient-to-r from-amber-600 to-amber-500 text-base-950 font-bold text-[11px] uppercase tracking-[.15em] px-6 py-3 rounded-sm">Get Quote</a>
+      </div>
+      <button id="menuBtn" class="lg:hidden text-slate-200 p-2" aria-label="Open menu"><i data-lucide="menu" class="w-5 h-5"></i></button>
+    </div>
+  </div>
+  <div class="glow-line"></div>
+</nav>
+
+<!-- MOBILE MENU -->
+<div id="mobileMenu" class="mobile-m fixed inset-0 z-[60] bg-base-900 flex flex-col">
+  <div class="flex items-center justify-between px-4 h-16 border-b border-navy-800/30">
+    <span class="text-slate-100 font-extrabold text-sm tracking-[.12em] uppercase">R B Export & Import</span>
+    <button id="closeMenu" class="text-slate-200 p-2" aria-label="Close menu"><i data-lucide="x" class="w-5 h-5"></i></button>
+  </div>
+  <div class="flex-1 flex flex-col justify-center px-8 gap-6">
+    <a href="index.html#about" class="text-2xl font-bold text-slate-200 hover:text-amber-500 transition-colors">About</a>
+    <a href="product.html" class="text-2xl font-bold text-slate-200 hover:text-amber-500 transition-colors">Products</a>
+    <a href="documents.html" class="text-2xl font-bold text-amber-500">Documents</a>
+    <a href="index.html#location" class="text-2xl font-bold text-slate-200 hover:text-amber-500 transition-colors">Location</a>
+    <a href="index.html#contact" class="amber-btn inline-block bg-amber-600 text-base-950 font-bold text-sm uppercase tracking-widest px-8 py-4 rounded-sm text-center mt-4">Get a Quote</a>
+  </div>
+</div>
+
+<!-- HEADER -->
+<section class="relative py-14 lg:py-20 border-b border-navy-800/20 overflow-hidden">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+    <div class="flex items-center gap-2 text-[11px] text-slate-500 uppercase tracking-wider mb-6 fade-up">
+      <a href="index.html" class="hover:text-amber-500 transition-colors">Home</a>
+      <i data-lucide="chevron-right" class="w-3 h-3"></i>
+      <span class="text-slate-400">Documents</span>
+    </div>
+    <div class="flex items-center gap-3 mb-3 fade-up">
+      <div class="w-6 h-[1px] bg-navy-500"></div>
+      <span class="text-navy-400 text-[10px] font-bold uppercase tracking-[.3em]">Compliance & Paperwork</span>
+    </div>
+    <h1 class="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight leading-[.95] mb-4 fade-up d1">EXPORT DOCUMENTATION</h1>
+    <p class="text-slate-400 text-sm max-w-xl leading-relaxed fade-up d2">
+      Every shipment ships with the full paperwork trail — licenses, lab reports, and customs documents — verified and ready for your import authority. Filter by category or open a document to see what's included.
+    </p>
+  </div>
+</section>
+
+<!-- FILTERS -->
+<section class="py-8 lg:py-10">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div id="filterBar" class="flex flex-wrap gap-2 fade-up">
+      <button data-filter="all" class="tag-pill active text-[11px] font-semibold uppercase tracking-wider px-4 py-2 rounded-sm">All Documents</button>
+      <button data-filter="licenses" class="tag-pill text-[11px] font-semibold uppercase tracking-wider px-4 py-2 rounded-sm text-slate-400">Licenses & Registration</button>
+      <button data-filter="quality" class="tag-pill text-[11px] font-semibold uppercase tracking-wider px-4 py-2 rounded-sm text-slate-400">Quality & Testing</button>
+      <button data-filter="shipping" class="tag-pill text-[11px] font-semibold uppercase tracking-wider px-4 py-2 rounded-sm text-slate-400">Shipping & Customs</button>
+    </div>
+  </div>
+</section>
+
+<!-- DOCUMENT CARDS -->
+<section class="py-6 lg:py-10 pb-20">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div id="docGrid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4"></div>
+  </div>
+</section>
+
+<div class="divider max-w-7xl mx-auto"></div>
+
+<!-- CTA -->
+<section class="py-14 lg:py-20">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="fade-up bg-base-800 border border-navy-800/30 rounded-sm p-8 lg:p-12 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6">
+      <div>
+        <h3 class="text-xl lg:text-2xl font-black tracking-tight mb-2">Need a document verified before you order?</h3>
+        <p class="text-slate-400 text-sm max-w-lg">Request a sample copy of any certificate above — our compliance team replies within 48 hours.</p>
+      </div>
+      <a href="https://wa.me/917431977009?text=Hello%20R%20B%20Export%20%26%20Import%2C%20I%20would%20like%20to%20request%20a%20document." target="_blank" rel="noopener noreferrer" class="amber-btn shrink-0 bg-gradient-to-r from-amber-600 to-amber-500 text-base-950 font-bold text-[11px] uppercase tracking-[.15em] px-7 py-4 rounded-sm flex items-center gap-2">
+        <i data-lucide="message-circle" class="w-4 h-4"></i> Request a Document
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="py-14 bg-base-950 border-t border-navy-800/20">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+    <span class="text-slate-100 font-extrabold text-sm tracking-[.12em] uppercase">R B Export & Import</span>
+    <p class="text-[11px] text-slate-600">&copy; <span id="year"></span> R B Export & Import. All rights reserved.</p>
+  </div>
+</footer>
+
+<!-- MODAL -->
+<div id="docModal" class="hidden fixed inset-0 z-[80] flex items-center justify-center p-4" style="background:rgba(2,6,23,.8);backdrop-filter:blur(4px);">
+  <div class="modal-panel bg-base-800 border border-navy-800/40 rounded-sm max-w-md w-full p-7 relative">
+    <button id="modalClose" class="absolute top-4 right-4 text-slate-400 hover:text-amber-500 transition-colors" aria-label="Close"><i data-lucide="x" class="w-5 h-5"></i></button>
+    <div id="modalIcon" class="w-14 h-14 rounded-sm flex items-center justify-center mb-5 bg-navy-900/40 border border-navy-800/30"></div>
+    <span id="modalTag" class="tag-pill inline-block text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-sm mb-3"></span>
+    <h3 id="modalTitle" class="text-xl font-black tracking-tight mb-2"></h3>
+    <p id="modalDesc" class="text-slate-400 text-sm leading-relaxed mb-5"></p>
+    <div id="modalMeta" class="space-y-2 mb-6"></div>
+    <a id="modalCta" href="#" target="_blank" rel="noopener noreferrer" class="amber-btn w-full bg-gradient-to-r from-amber-600 to-amber-500 text-base-950 font-bold text-[11px] uppercase tracking-[.15em] py-3.5 rounded-sm flex items-center justify-center gap-2">
+      <i data-lucide="message-circle" class="w-4 h-4"></i> Request Copy
+    </a>
+  </div>
+</div>
+
+<script>
+  lucide.createIcons();
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  const menuBtn = document.getElementById('menuBtn');
+  const closeMenu = document.getElementById('closeMenu');
+  const mobileMenu = document.getElementById('mobileMenu');
+  menuBtn?.addEventListener('click', () => mobileMenu.classList.add('open'));
+  closeMenu?.addEventListener('click', () => mobileMenu.classList.remove('open'));
+
+  const documents = [
+    { id:'coo', cat:'licenses', icon:'file-check-2', title:'Certificate of Origin', tag:'Licenses', desc:'Confirms the country of manufacture for every consignment, issued and stamped by the local Chamber of Commerce.', meta:['Issued per shipment','Chamber-attested'] },
+    { id:'iec', cat:'licenses', icon:'building-2', title:'IEC Registration', tag:'Licenses', desc:'Import Export Code issued by DGFT, India — our legal authorization to trade across international borders.', meta:['Government of India','DGFT issued'] },
+    { id:'gst', cat:'licenses', icon:'receipt', title:'GST Registration', tag:'Licenses', desc:'Goods and Services Tax registration for all domestic and export invoicing compliance.', meta:['Valid & active','Export eligible'] },
+    { id:'iso', cat:'quality', icon:'award', title:'ISO 22000:2018', tag:'Quality', desc:'Food safety management certification verifying our sourcing, handling, and storage processes meet global standards.', meta:['Third-party audited','Valid 3 years'] },
+    { id:'phyto', cat:'quality', icon:'leaf', title:'Phytosanitary Certificate', tag:'Quality', desc:'Confirms agricultural goods are free of pests and disease, required by most destination countries at customs.', meta:['Plant quarantine dept.','Per consignment'] },
+    { id:'lab', cat:'quality', icon:'flask-conical', title:'Lab Test Report', tag:'Quality', desc:'Independent lab analysis covering moisture, purity, and contaminant levels for every batch we ship.', meta:['NABL-accredited lab','Batch-specific'] },
+    { id:'fumigation', cat:'shipping', icon:'wind', title:'Fumigation Certificate', tag:'Shipping', desc:'Confirms wooden packaging and cargo have been treated against pests, per ISPM-15 shipping standards.', meta:['ISPM-15 compliant','Per container'] },
+    { id:'bol', cat:'shipping', icon:'ship', title:'Bill of Lading', tag:'Shipping', desc:'The shipping carrier\'s official receipt and contract of carriage — proof of shipment for customs clearance.', meta:['Issued by carrier','Per shipment'] },
+    { id:'packing', cat:'shipping', icon:'package-check', title:'Packing List', tag:'Shipping', desc:'Itemized breakdown of every carton, pallet, and container weight and dimension in the shipment.', meta:['Matches invoice','Per shipment'] },
+  ];
+
+  const iconColor = (cat) => cat === 'quality' ? 'amber' : 'navy';
+  const grid = document.getElementById('docGrid');
+
+  function cardHTML(doc, i) {
+    const c = iconColor(doc.cat);
+    return `
+    <div class="doc-grid-item show" data-cat="${doc.cat}" style="transition-delay:${i*40}ms">
+      <div class="doc-card fade-up" data-id="${doc.id}">
+        <div class="cb rounded-sm p-6 h-full flex flex-col">
+          <div class="doc-shine"></div>
+          <div class="flex items-start justify-between mb-5 relative z-10">
+            <div class="doc-icon w-11 h-11 rounded-sm flex items-center justify-center ${c==='amber' ? 'bg-amber-900/25 border-amber-800/25' : ''}">
+              <i data-lucide="${doc.icon}" class="w-5 h-5 ${c==='amber' ? 'text-amber-500' : 'text-navy-400'}"></i>
+            </div>
+            <i data-lucide="arrow-up-right" class="doc-arrow w-4 h-4 text-amber-500"></i>
+          </div>
+          <h4 class="text-sm font-bold uppercase tracking-wider mb-2 relative z-10">${doc.title}</h4>
+          <p class="text-xs leading-relaxed text-slate-500 mb-4 relative z-10 flex-1">${doc.desc}</p>
+          <div class="flex items-center gap-2 relative z-10">
+            <span class="status-dot w-1.5 h-1.5 rounded-full bg-navy-500"></span>
+            <span class="text-[10px] uppercase tracking-wider text-slate-600">Available on request</span>
+          </div>
+        </div>
+      </div>
+    </div>`;
+  }
+
+  grid.innerHTML = documents.map(cardHTML).join('');
+  lucide.createIcons();
+
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.fade-up').forEach(el => obs.observe(el));
+
+  document.querySelectorAll('.doc-card').forEach(card => {
+    card.addEventListener('mousemove', (e) => {
+      const r = card.getBoundingClientRect();
+      card.style.setProperty('--mx', ((e.clientX - r.left) / r.width * 100) + '%');
+      card.style.setProperty('--my', ((e.clientY - r.top) / r.height * 100) + '%');
+    });
+  });
+
+  document.getElementById('filterBar').addEventListener('click', (e) => {
+    const btn = e.target.closest('[data-filter]');
+    if (!btn) return;
+    document.querySelectorAll('#filterBar .tag-pill').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    const f = btn.dataset.filter;
+    document.querySelectorAll('.doc-grid-item').forEach(item => {
+      const match = f === 'all' || item.dataset.cat === f;
+      item.classList.toggle('hide', !match);
+      item.classList.toggle('show', match);
+    });
+  });
+
+  const modal = document.getElementById('docModal');
+  grid.addEventListener('click', (e) => {
+    const card = e.target.closest('.doc-card');
+    if (!card) return;
+    const doc = documents.find(d => d.id === card.dataset.id);
+    if (!doc) return;
+    const c = iconColor(doc.cat);
+    document.getElementById('modalIcon').className = `w-14 h-14 rounded-sm flex items-center justify-center mb-5 ${c==='amber' ? 'bg-amber-900/25 border border-amber-800/25' : 'bg-navy-900/40 border border-navy-800/30'}`;
+    document.getElementById('modalIcon').innerHTML = `<i data-lucide="${doc.icon}" class="w-6 h-6 ${c==='amber' ? 'text-amber-500' : 'text-navy-400'}"></i>`;
+    document.getElementById('modalTag').textContent = doc.tag;
+    document.getElementById('modalTag').className = `tag-pill inline-block text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-sm mb-3 ${c==='amber' ? 'text-amber-400' : 'text-navy-400'}`;
+    document.getElementById('modalTitle').textContent = doc.title;
+    document.getElementById('modalDesc').textContent = doc.desc;
+    document.getElementById('modalMeta').innerHTML = doc.meta.map(m => `<div class="flex items-center gap-2 text-xs text-slate-400"><i data-lucide="check" class="w-3.5 h-3.5 text-navy-400"></i>${m}</div>`).join('');
+    document.getElementById('modalCta').href = `https://wa.me/917431977009?text=${encodeURIComponent('Request: ' + doc.title)}`;
+    modal.classList.remove('hidden');
+    lucide.createIcons();
+  });
+
+  document.getElementById('modalClose').addEventListener('click', () => modal.classList.add('hidden'));
+  modal.addEventListener('click', (e) => { if (e.target === modal) modal.classList.add('hidden'); });
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape') modal.classList.add('hidden'); });
+</script>
+</body>
+</html>
